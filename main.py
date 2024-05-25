@@ -7,6 +7,8 @@ console = Console()
 cap = cv2.VideoCapture(0)
 
 # Testing Zone
+cap.set(cv2.CAP_PROP_FRAME_WIDTH,1920)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT,1080)
 
 
 if not cap.isOpened():
@@ -15,6 +17,7 @@ if not cap.isOpened():
 while True:
     ret, frame = cap.read()
     frame = cv2.flip(frame, 1)
+
 
     # Region to capture
 
@@ -27,12 +30,13 @@ while True:
 
     # Fail Safe Mechanism 1
     if cv2.waitKey(1) & 0xFF == ord('q'):
+        console.print("Fail-Safe init", style="bold red blink")
         break
     # Fail Safe Mechanism
     screen_width, screen_heigh = pyautogui.size()
     cursor_x, cursor_y = pyautogui.position()
     if cursor_x >= screen_width - 1 and cursor_y <= 1:
-        console.print("Fail Safe initiated!", style="bold red blink")
+        console.print("Fail-Safe init!", style="bold red blink")
         break
 
 
