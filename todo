@@ -1,0 +1,3 @@
+1. Add mediapipe for sensory data
+2. Remove grayscale transformation, as it's not that effective. -> PRIORITY EXTREME
+3. Better lighting control, too dark.
