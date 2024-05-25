@@ -6,7 +6,7 @@ from rich.console import Console
 console = Console()
 cap = cv2.VideoCapture(0)
 
-# Testing
+# Testing Zone
 
 
 if not cap.isOpened():
