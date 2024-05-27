@@ -2,7 +2,7 @@ import numpy as np
 
 
 def angleGet(a, b, c):
-    radians = np.arctan(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
+    radians = np.arctan2(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
     angle = np.abs(np.degrees(radians))
     return angle
 
