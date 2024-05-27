@@ -4,7 +4,8 @@ from rich.console import Console
 import mediapipe as mp
 import util
 
-
+# Getting the screen width and height. Global.
+screen_width, screen_height = pyautogui.size()
 def findFingerTip(processed):
     if processed.multi_hand_landmarks:
         hand_landmarks = processed.multi_hand_landmarks[0]
@@ -12,13 +13,20 @@ def findFingerTip(processed):
 
     return None
 
-
+def moveMouse(indexFingerTip):
+    if indexFingerTip is not None:
+        x = int(indexFingerTip.x * screen_width)
+        y = int(indexFingerTip.y * screen_height)
+        pyautogui.moveTo(x,y)
 # Detecting Gestures
 def detectGestures(frame, landmarks_list, processed):
     if len(landmarks_list)>=21:
         # test
         indexFingerTip = findFingerTip(processed)
-        print(indexFingerTip)
+        thumbIndexDist = util.getDistance([landmarks_list[4], landmarks_list[5]])
+
+        if thumbIndexDist < 50 and util.angleGet(landmarks_list[5], landmarks_list[6], landmarks_list[8])>90:
+            moveMouse(indexFingerTip)
 
 
 console = Console()
@@ -75,7 +83,6 @@ while True:
         console.print("Fail-Safe init", style="bold red blink")
         break
     # Fail Safe Mechanism
-    screen_width, screen_height = pyautogui.size()
     cursor_x, cursor_y = pyautogui.position()
     if cursor_x >= screen_width - 1 and cursor_y <= 1:
         console.print("Fail-Safe init!", style="bold red blink")
