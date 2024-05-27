@@ -1,8 +1,25 @@
 import cv2
-import numpy as np
 import pyautogui
 from rich.console import Console
 import mediapipe as mp
+import util
+
+
+def findFingerTip(processed):
+    if processed.multi_hand_landmarks:
+        hand_landmarks = processed.multi_hand_landmarks[0]
+        return hand_landmarks.landmark[mpHands.HandLandmark.INDEX_FINGER_TIP]
+
+    return None
+
+
+# Detecting Gestures
+def detectGestures(frame, landmarks_list, processed):
+    if len(landmarks_list)>=21:
+
+        indexFingerTip = findFingerTip(processed)
+        print(indexFingerTip)
+
 
 console = Console()
 cap = cv2.VideoCapture(0)
@@ -27,48 +44,38 @@ if not cap.isOpened():
 while True:
     ret, frame = cap.read()
     frame = cv2.flip(frame, 1)
-    frameRBG = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
+    frameRBG = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
     processed = hands.process(frameRBG)
 
     landmarks_list = []
 
-    # if processed.multi_hand_landmarks:
-    #     hand_landmarks = processed.multi_hand_landmarks[0]
-    #     draw.draw_landmarks(frame,hand_landmarks,mpHands.HAND_CONNECTIONS)
-    #
-    #     for lm in hand_landmarks.landmark:
-    #         landmarks_list.append((lm.x, lm.y))
-    #
-    #     print(landmarks_list)
-
-
-
-# Optimzed for the above code
+    # Optimized Code.
     if processed.multi_hand_landmarks:
         for hand_landmarks in processed.multi_hand_landmarks:
             draw.draw_landmarks(frame, hand_landmarks, mpHands.HAND_CONNECTIONS)
 
-            #Extarct coords
+            # Extract coords
             for lm in hand_landmarks.landmark:
                 # testing
                 # print("lm.x:", lm.x)
                 # print("lm.y:", lm.y)
                 # x, y = int(lm.x * frame.shape[1]), int(lm.y * frame.shape[0]) # For Pixel Precision
                 landmarks_list.append((lm.x, lm.y))
-                print(lm.x, lm.y)
+                # print(lm.x, lm.y) # Prints all the coords of the landmarks
 
-
+    # Show image.
     cv2.imshow("CamWin", frame)
 
     # Implement Media Pipe for hand gestures
+    detectGestures(frame, landmarks_list, processed)
 
     # Fail Safe Mechanism 1
     if cv2.waitKey(1) & 0xFF == ord('q'):
         console.print("Fail-Safe init", style="bold red blink")
         break
     # Fail Safe Mechanism
-    screen_width, screen_heigh = pyautogui.size()
+    screen_width, screen_height = pyautogui.size()
     cursor_x, cursor_y = pyautogui.position()
     if cursor_x >= screen_width - 1 and cursor_y <= 1:
         console.print("Fail-Safe init!", style="bold red blink")
