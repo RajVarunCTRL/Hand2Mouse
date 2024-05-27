@@ -15,7 +15,7 @@ Hand2Mouse is a Python application that allows you to control your computer mous
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your_username/Hand2Mouse.git 
+    git clone https://github.com/your_username/Hand2Mouse.git
     ```
 
 2. Install the required dependencies:
