@@ -16,7 +16,7 @@ def findFingerTip(processed):
 # Detecting Gestures
 def detectGestures(frame, landmarks_list, processed):
     if len(landmarks_list)>=21:
-
+        # test
         indexFingerTip = findFingerTip(processed)
         print(indexFingerTip)
 
