@@ -75,7 +75,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Authors 👨‍💻
 
-- Raj Varun (@RajVarunCTRL) - [GitHub](https://github.com/RajVarunCTRL)
+- RajVarun (@RajVarunCTRL) - [GitHub](https://github.com/RajVarunCTRL)
 
 ## Support 📞
 
