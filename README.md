@@ -3,7 +3,7 @@
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg"/>
 
 
 </div>
@@ -14,7 +14,6 @@
 <img src="https://img.shields.io/badge/OpenCV-used-green?style=for-the-badge">
 <img src="https://img.shields.io/badge/PyAutoGUI-used-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/MediaPipe-used-orange?style=for-the-badge">
->
 </div>
 
 Hand2Mouse is a Python application that allows you to control your computer mouse using hand gestures captured from your webcam. It utilizes the MediaPipe library for hand detection and gesture recognition, allowing you to perform mouse actions such as left-click, right-click, and double-click by moving your hand.
