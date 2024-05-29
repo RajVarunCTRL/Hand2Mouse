@@ -4,12 +4,17 @@
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+
+
 </div>
 
+
 <div align="center">
-<img src="https://img.shields.io/badge/PyAutoGUI-Used-blue.svg" />
-<img src="https://img.shields.io/badge/OpenCV-Used-green.svg" />
-<img src="https://img.shields.io/badge/MediaPipe-Used-orange.svg" />
+<img src="https://img.shields.io/badge/LICENSE-MIT-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/OpenCV-used-green?style=for-the-badge">
+<img src="https://img.shields.io/badge/PyAutoGUI-used-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/MediaPipe-used-orange?style=for-the-badge">
+>
 </div>
 
 Hand2Mouse is a Python application that allows you to control your computer mouse using hand gestures captured from your webcam. It utilizes the MediaPipe library for hand detection and gesture recognition, allowing you to perform mouse actions such as left-click, right-click, and double-click by moving your hand.
@@ -21,14 +26,6 @@ Hand2Mouse is a Python application that allows you to control your computer mous
 - Supports hand tracking and gesture recognition using the MediaPipe library.
 - Fail-safe mechanism to ensure safe termination of the application.
 - Customizable gesture detection and mouse control logic.
-
-## Screenshots 📸
-
-![Hand Gesture Detection](https://your_image_link_here.com/screenshot1.png)
-*Caption: Hand gesture detection in action.*
-
-![Mouse Control](https://your_image_link_here.com/screenshot2.png)
-*Caption: Controlling the mouse cursor with hand gestures.*
 
 ## Installation 🚀
 
@@ -64,6 +61,8 @@ Hand2Mouse is a Python application that allows you to control your computer mous
 Contributions are welcome! If you have any ideas for improvements, new features, or bug fixes, feel free to open an issue or submit a pull request.
 
 ## License 📝
+<img src="https://img.shields.io/badge/LICENSE-MIT-orange?style=for-the-badge">
+
 
 This project is licensed under the [MIT License](LICENSE).
 
@@ -77,7 +76,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 - RajVarun (@RajVarunCTRL) - [GitHub](https://github.com/RajVarunCTRL)
 
-## Support 📞
+## Support
 
 For any inquiries or support regarding the Hand2Mouse project, please contact:
 - Discord: [rajgamesyt](https://discord.com/invite/your_server_id)
