@@ -1,4 +1,16 @@
-# Hand2Mouse 🖐2🖱️
+# Hand2Mouse 🖐️🖱️
+
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+</div>
+
+<div align="center">
+<img src="https://img.shields.io/badge/PyAutoGUI-Used-blue.svg" />
+<img src="https://img.shields.io/badge/OpenCV-Used-green.svg" />
+<img src="https://img.shields.io/badge/MediaPipe-Used-orange.svg" />
+</div>
 
 Hand2Mouse is a Python application that allows you to control your computer mouse using hand gestures captured from your webcam. It utilizes the MediaPipe library for hand detection and gesture recognition, allowing you to perform mouse actions such as left-click, right-click, and double-click by moving your hand.
 
@@ -9,6 +21,14 @@ Hand2Mouse is a Python application that allows you to control your computer mous
 - Supports hand tracking and gesture recognition using the MediaPipe library.
 - Fail-safe mechanism to ensure safe termination of the application.
 - Customizable gesture detection and mouse control logic.
+
+## Screenshots 📸
+
+![Hand Gesture Detection](https://your_image_link_here.com/screenshot1.png)
+*Caption: Hand gesture detection in action.*
+
+![Mouse Control](https://your_image_link_here.com/screenshot2.png)
+*Caption: Controlling the mouse cursor with hand gestures.*
 
 ## Installation 🚀
 
@@ -55,9 +75,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Authors 👨‍💻
 
-- Your Name (@RajVarunCTRL) - [GitHub](https://github.com/RajVarunCTRL)
+- Raj Varun (@RajVarunCTRL) - [GitHub](https://github.com/RajVarunCTRL)
 
 ## Support 📞
 
-For any inquiries or support regarding the Hand2Mouse project, please dm me:
-- Discord: rajgamesyt
+For any inquiries or support regarding the Hand2Mouse project, please contact:
+- Discord: [rajgamesyt](https://discord.com/invite/your_server_id)
